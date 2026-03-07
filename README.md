@@ -43,3 +43,7 @@ git push
 ```
 
 Since all configs are symlinked via stow, any changes made directly in `~/.config/` are automatically reflected in the dotfiles repo.
+
+## Wallpapers
+
+Wallpapers are not included in this repo. They are sourced from [everforest-walls](https://github.com/Apeiros-46B/everforest-walls) and will be automatically cloned by the install script.
