@@ -11,6 +11,6 @@ git clone https://github.com/Apeiros-46B/everforest-walls ~/Pictures/Wallpapers/
 
 # Stow all configs
 cd ~/dotfiles
-stow hypr waybar kitty rofi swaync fastfetch starship waypaper scripts
+stow hypr waybar kitty rofi swaync fastfetch starship waypaper scripts zsh gtk icons
 
 echo "Done! Log out and back in to apply all changes."
