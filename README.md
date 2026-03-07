@@ -31,3 +31,15 @@ Everforest-themed Hyprland rice for Arch Linux.
    cd ~/dotfiles
    stow hypr waybar kitty rofi swaync fastfetch starship waypaper scripts
 ```
+
+## Keeping dotfiles in sync
+
+After making any config changes, push them to GitHub:
+```bash
+cd ~/dotfiles
+git add .
+git commit -m "description of changes"
+git push
+```
+
+Since all configs are symlinked via stow, any changes made directly in `~/.config/` are automatically reflected in the dotfiles repo.
