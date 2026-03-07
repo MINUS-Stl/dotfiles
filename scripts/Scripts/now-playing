@@ -1,0 +1,37 @@
+#!/bin/bash
+
+strip_suffix() {
+    echo "${1% | YouTube Music}"
+}
+
+get_art_path() {
+    local art_url="$1"
+    if [[ "$art_url" == data:* ]]; then
+        local tmp="/tmp/now-playing-art.jpg"
+        echo "${art_url#data:image/jpeg;base64,}" | base64 -d > "$tmp" 2>/dev/null
+        echo "$tmp"
+    else
+        echo "${art_url#file://}"
+    fi
+}
+
+get_title() {
+    playerctl --player=JellyfinDesktop,firefox metadata title 2>/dev/null
+}
+
+last_track=$(strip_suffix "$(get_title)")
+
+while true; do
+    sleep 2
+    raw_title=$(get_title)
+    title=$(strip_suffix "$raw_title")
+    if [ -n "$title" ] && [ "$title" != "$last_track" ] && [ "$title" != "YouTube Music" ]; then
+        sleep 1
+        title=$(strip_suffix "$(get_title)")
+        artist=$(playerctl --player=JellyfinDesktop,firefox metadata xesam:artist 2>/dev/null)
+        art_url=$(playerctl --player=JellyfinDesktop,firefox metadata mpris:artUrl 2>/dev/null)
+        art=$(get_art_path "$art_url")
+        last_track="$title"
+        notify-send -a "now-playing" -i "$art" "Now Playing" "${title}${artist:+\n$artist}" -t 5000
+    fi
+done

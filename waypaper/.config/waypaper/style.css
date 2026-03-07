@@ -1,0 +1,32 @@
+window {
+    background-color: #272E33;
+    color: #D3C6AA;
+}
+
+button {
+    background-color: #2E383C;
+    border-color: #374145;
+    color: #D3C6AA;
+}
+
+button:hover {
+    background-image: none;
+    box-shadow: none;
+    border-color: #A7C080;
+}
+
+button:hover>image {
+    -gtk-icon-shadow: none;
+    -gtk-icon-effect: none;
+}
+
+.highlighted-button {
+    background-image: none;
+    box-shadow: none;
+    background-color: #374145;
+    border-color: #A7C080;
+}
+
+.highlighted-button>image, .highlighted-button:hover>image {
+    -gtk-icon-effect: highlight;
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers/everforest"
+
+chosen=$(find "$WALLPAPER_DIR" -name "*.png" -o -name "*.jpg" | \
+    sed "s|$WALLPAPER_DIR/||" | \
+    sort | \
+    rofi -dmenu -i -p "Wallpaper" -theme-str 'window {width: 600px;}')
+
+[ -z "$chosen" ] && exit
+
+swww img "$WALLPAPER_DIR/$chosen"

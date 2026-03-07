@@ -1,0 +1,190 @@
+* {
+  font-family: '0xProto Nerd Font', 'JetBrainsMono NF', 'Symbols Nerd Font', monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  font-size: 13px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  transition: none;
+}
+
+#custom-apps {
+  background-color: @accent;
+  color: @bg;
+  border-radius: 6px;
+  margin: 6px 8px 6px 12px;
+  padding: 4px 16px 4px 14px;
+}
+
+#workspaces {
+  background-color: @bg-light;
+  border-radius: 6px;
+  margin: 6px 8px 6px 0;
+  padding: 0;
+}
+
+#workspaces button {
+  all: unset;
+  padding: 4px 10px;
+  color: @inactive;
+  background: transparent;
+  min-height: 0;
+  border-radius: 6px;
+}
+
+#workspaces button.active {
+  color: @icons;
+}
+
+#workspaces button:hover {
+  background-color: @border;
+  color: @accent;
+  border: none;
+  box-shadow: none;
+}
+
+#mpris {
+  background-color: @bg-light;
+  border-radius: 6px;
+  color: @fg;
+  margin: 6px 0;
+  padding: 4px 14px;
+}
+
+/* Group power wrapper */
+#power-wrapper-ignore {
+  margin: 0 8px 0 0;
+}
+
+/* Power - PWR button */
+#custom-power-left-end {
+  background-color: @bg-light;
+  color: @icons;
+  border-radius: 6px;
+  margin: 6px 0 6px 0;
+  padding: 4px 16px 4px 14px;
+}
+
+/* Power drawer items - smaller height */
+#custom-shutdown,
+#custom-reboot,
+#custom-logout,
+#custom-suspend {
+  background-color: @bg-light;
+  color: @icons;
+  border-radius: 0;
+  margin: 9px 0;
+  padding: 2px 10px;
+  min-height: 0;
+}
+
+#custom-shutdown {
+  border-radius: 6px 0 0 6px;
+  margin-right: 0;
+}
+
+#custom-reboot {
+  border-radius: 0 6px 6px 0;
+}
+
+#custom-divider {
+  background-color: @bg-light;
+  border-right: 1px solid @border;
+  border-radius: 0;
+  margin: 9px 0;
+  padding: 0;
+  min-height: 0;
+  min-width: 1px;
+  font-size: 0;
+}
+
+/* Audio pill */
+#custom-audio-icon {
+  background-color: @bg-light;
+  border-radius: 6px 0 0 6px;
+  color: @icons;
+  margin: 6px 0 6px 8px;
+  padding: 4px 6px 4px 10px;
+}
+
+#pulseaudio {
+  background-color: @bg-light;
+  border-radius: 0 6px 6px 0;
+  color: @fg;
+  margin: 6px 8px 6px 0;
+  padding: 4px 10px 4px 4px;
+}
+
+#network {
+  background-color: @bg-light;
+  border-radius: 6px;
+  color: @fg;
+  margin: 6px 8px 6px 0;
+  padding: 4px 16px 4px 14px;
+}
+
+#tray {
+  background-color: @bg-light;
+  border-radius: 6px;
+  margin: 6px 8px 6px 0;
+  padding: 4px 10px;
+}
+
+#custom-notifications {
+  background-color: @bg-light;
+  border-radius: 6px;
+  color: @icons;
+  margin: 6px 8px 6px 0;
+  padding: 4px 16px 4px 14px;
+}
+
+#custom-clock-icon {
+  background-color: @bg-light;
+  border-radius: 6px 0 0 6px;
+  color: @icons;
+  margin: 6px 0;
+  padding: 4px 6px 4px 14px;
+}
+
+#clock {
+  background-color: @bg-light;
+  border-radius: 0 6px 6px 0;
+  color: @fg;
+  margin: 6px 8px 6px 0;
+  padding: 4px 10px 4px 6px;
+}
+
+.drawer {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+box {
+  background: transparent;
+}
+#custom-shutdown:hover,
+#custom-reboot:hover,
+#custom-logout:hover,
+#custom-suspend:hover {
+  background-color: @border;
+  color: @accent;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: @bg-light;
+  border: 1px solid @border;
+  border-radius: 6px;
+  color: @fg;
+}
+
+tooltip label {
+  color: @fg;
+}

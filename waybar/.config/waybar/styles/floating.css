@@ -1,0 +1,14 @@
+window#waybar {
+  background-color: transparent;
+  border: none;
+}
+
+#custom-apps, #workspaces, #mpris, #custom-notifications,
+#clock, #pulseaudio, #network, #tray,
+#custom-shutdown, #custom-logout, #custom-reboot,
+#custom-firmware, #custom-suspend, #custom-tray-collapsed,
+#custom-power-left-end, #custom-tray-left-end,
+#custom-clock-icon, #custom-audio-icon {
+  margin-top: 5px;
+  margin-bottom: 0;
+}

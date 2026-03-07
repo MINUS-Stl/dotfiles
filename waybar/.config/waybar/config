@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "modules-left": ["custom/apps", "hyprland/workspaces"],
+  "modules-center": ["mpris"],
+  "modules-right": [
+    "group/power",
+    "custom/audio-icon", "pulseaudio",
+    "network",
+    "tray",
+    "custom/clock-icon", "clock",
+    "custom/notifications"
+  ],
+
+  "custom/apps": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click": "rofi -show drun -disable-history"
+  },
+
+  "hyprland/workspaces": {
+    "active-only": false,
+    "format": "{icon}",
+    "tooltip": false,
+    "all-outputs": true,
+    "format-icons": {
+      "active": "●",
+      "default": "○"
+    }
+  },
+
+  "mpris": {
+    "format": "{artist} - {title}",
+    "format-paused": "<i>{artist} - {title}</i>",
+    "format-stopped": "",
+    "player": "JellyfinDesktop",
+    "max-length": 50,
+    "tooltip-format": "{artist}\n{title}\n{album}"
+  },
+
+  "custom/notifications": {
+    "tooltip": false,
+    "format": "󰂚",
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "custom/shutdown": {
+    "format": "󰐥",
+    "tooltip": true,
+    "tooltip-format": "Shutdown",
+    "on-click": "$HOME/Scripts/Power -s"
+  },
+
+  "custom/reboot": {
+    "format": "󰑐",
+    "tooltip": true,
+    "tooltip-format": "Reboot",
+    "on-click": "$HOME/Scripts/Power -r"
+  },
+
+  "custom/logout": {
+    "format": "󰍃",
+    "tooltip": true,
+    "tooltip-format": "Logout",
+    "on-click": "$HOME/Scripts/Power -l"
+  },
+
+  "custom/suspend": {
+    "format": "󰌾",
+    "tooltip": true,
+    "tooltip-format": "Lock",
+    "on-click": "hyprlock"
+  },
+
+  "custom/power-left-end": {
+    "format": "⏻",
+    "tooltip": false
+  },
+
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power-left-end",
+      "custom/shutdown",
+      "custom/suspend",
+      "custom/logout",
+      "custom/reboot",
+    ]
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 12
+  },
+
+  "custom/clock-icon": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p} ",
+    "interval": 1,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "custom/audio-icon": {
+    "exec": "$HOME/.config/waybar/scripts/volume",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% ",
+    "tooltip": false,
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "<span color='#A7C080'>󰤨</span>  {signalStrength}%",
+    "format-ethernet": "<span color='#A7C080'>󰈀</span> ETH",
+    "format-disconnected": "<span color='#A7C080'>󰤭</span>",
+    "tooltip-format": "{essid}/n{ifname} via {gwaddr}\nStrength: {signalStrength}%",
+    "on-click": "kitty --command nmtui"
+  }
+}

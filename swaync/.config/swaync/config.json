@@ -1,0 +1,16 @@
+{
+    "notification-visibility": {
+        "plasma-media": {
+            "state": "ignored",
+            "app-name": "plasma-browser-integration"
+        },
+        "browser-media": {
+            "state": "ignored",
+            "app-name": "Zen Browser"
+        },
+        "now-playing": {
+            "state": "enabled",
+            "app-name": "now-playing"
+        }
+    }
+}
