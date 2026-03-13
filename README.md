@@ -10,6 +10,7 @@ Everforest-themed Hyprland rice for Arch Linux.
 - **Launcher**: Rofi
 - **Notifications**: Swaync
 - **Wallpaper**: Swww + Waypaper
+- **Visualizer**: Kwybars
 - **Lock**: Hyprlock
 - **Idle**: Hypridle
 - **Theme**: Everforest Dark Soft
