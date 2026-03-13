@@ -1,0 +1,20 @@
+[overlay]
+monitor_mode = "all"
+layer = "background"
+position = "bottom"
+full_length = true
+height = 80
+anchor_margin = 0
+margin_left = 0
+margin_right = 0
+
+[visualizer]
+layout = "line"
+bar_corner_radius = 4
+bars = 50
+bar_width = 6
+gap = 3
+framerate = 60
+color_mode = "gradient"
+theme = "everforest"
+theme_opacity = 0.85
